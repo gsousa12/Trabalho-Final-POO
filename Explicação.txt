@@ -24,7 +24,7 @@ uma mensagem na cifra de cesar.
     1.2 - subtrair esse resultado com 26 garanteque estamos revertendo o 
     deslocamento corretamente.
 
-2 - Restição
+2 - Restrição
     2.1 - O operador modulo(%) garante que o deslocamento esteja dentro do
     intervalo de 0 a 25.
 
