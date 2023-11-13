@@ -1,0 +1,38 @@
+• A cifra de CÉSAR é uma cifra de substituição que transforma uma mensagem
+deslocando suas letras em um determinado deslocamento.
+
+> Digamos que a taxa de deslocamento é 3. Então a letra A seria transformada 
+em D, a letra B em E, a letra C em F etc...
+> Quando chegar na letra Z, voltamos ao inicio do alfabeto.
+
+
+
+
+• Explicação do return do método descifrar:
+
+return cifra(mensagem, 26 - (deslocamento % 26));
+
+Por que utilizei o parametro ' 26 - (deslocamento % 26)' ?
+
+Para garantir a inversão corretado do deslocamento para descifrar
+uma mensagem na cifra de cesar.
+1 - Inversão
+    1.1 - (deslocamento % 26) garante que nosso deslocamento fique dentro
+    do intervalo valido para o alfabeto de 26 letras (evita deslocamentos
+    maiores que 26, pois o alfabeto se repete a cada 26 posições).
+
+    1.2 - subtrair esse resultado com 26 garanteque estamos revertendo o 
+    deslocamento corretamente.
+
+2 - Restição
+    2.1 - O operador modulo(%) garante que o deslocamento esteja dentro do
+    intervalo de 0 a 25.
+
+    Ex: Deslocamento = 3
+    Para decifrar um deslocamento de 3 precisamos  retorceder 3 posições 
+    que é o mesmo de avançar 23 posições.
+    A = D (Deslocamento de 3)
+    D para chegar em A novamente é so avançar 23 posições.
+    26 - (3 % 26) = 23;
+    Por isso usamos 26 - (deslocamento % 26).
+
