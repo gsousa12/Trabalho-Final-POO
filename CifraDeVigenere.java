@@ -1,18 +1,9 @@
-/********* 
- -*- Made by VoxelPixel
- -*- For YouTube Tutorial
- -*- https://github.com/VoxelPixel
- -*- Support me on Patreon: https://www.patreon.com/voxelpixel
-*********/
 import java.util.Scanner;
-
 public class CifraDeVigenere {
 
     private static Scanner in;
     private static String message;
     private static String mappedKey;
-
-    
 
     private static void cipherDecryption(String message, String mappedKey) {
         int[][] table = createVigenereTable();
