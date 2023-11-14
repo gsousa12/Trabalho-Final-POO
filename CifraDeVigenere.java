@@ -12,25 +12,7 @@ public class CifraDeVigenere {
     private static String message;
     private static String mappedKey;
 
-    public static void main(String[] args){
-        in = new Scanner(System.in);
-        System.out.print("1. Encryption\n2. Decryption\nChoose(1,2): ");
-        int choice = in.nextInt();
-        in.nextLine();
-
-        if(choice == 1){
-            System.out.println("---Encryption---");
-            msgAndKey();
-            cipherEncryption(message, mappedKey);
-        } else if(choice == 2){
-            System.out.println("---Decryption---");
-            msgAndKey();
-            cipherDecryption(message, mappedKey);
-
-        } else {
-            System.out.println("Incorrect Choice");
-        }
-    }
+    
 
     private static void cipherDecryption(String message, String mappedKey) {
         int[][] table = createVigenereTable();
@@ -157,6 +139,26 @@ public class CifraDeVigenere {
 
 //        System.out.println("Message: " + message);
 //        System.out.println("key: " + mappedKey);
+    }
+
+    public static void main(String[] args){
+        in = new Scanner(System.in);
+        System.out.print("1. Encryption\n2. Decryption\nChoose(1,2): ");
+        int choice = in.nextInt();
+        in.nextLine();
+
+        if(choice == 1){
+            System.out.println("---Encryption---");
+            msgAndKey();
+            cipherEncryption(message, mappedKey);
+        } else if(choice == 2){
+            System.out.println("---Decryption---");
+            msgAndKey();
+            cipherDecryption(message, mappedKey);
+
+        } else {
+            System.out.println("Incorrect Choice");
+        }
     }
 
 }
