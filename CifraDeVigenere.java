@@ -49,7 +49,7 @@ public class CifraDeVigenere {
         int[][] table = createVigenereTable();
         String decryptedText = "";
 
-        for (int i = 0; i < message.length(); i++) {
+  for (int i = 0; i < message.length(); i++) {
             if (message.charAt(i) == (char) 32 && mappedKey.charAt(i) == (char) 32) {
                 decryptedText += " ";
             } else {

@@ -23,5 +23,7 @@ public class Teste {
                 System.out.println("Escolha inválida.");
                 break;
         }
+
+        sc.close();
     }
 }
